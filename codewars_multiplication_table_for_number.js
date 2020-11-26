@@ -16,6 +16,17 @@ For example, a multiplication table (string) for number == 5 looks like below:
 P. S. You can use \n in string to jump to the next line.
 */
 
-function multiTable(number) {
-  // good luck
+const multiTable = (number) => {
+  let result = '';
+  let product;
+  for(let i = 1; i < 11; i++) {
+    if(i === 10) {
+      product = i * number
+      result += i + ' * ' + number + ' = ' + product;
+    } else {
+      product = i * number
+      result += i + ' * ' + number + ' = ' + product + '\n';
+    }
+  }
+  return result;
 }
